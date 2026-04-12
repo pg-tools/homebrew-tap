@@ -5,21 +5,21 @@
 class Pgcompare < Formula
   desc "PostgreSQL query performance comparison tool for students"
   homepage "https://github.com/pg-tools/pgcompare"
-  version "0.1.1"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pg-tools/pgcompare/releases/download/v0.1.1/pgcompare_darwin_amd64.tar.gz"
-      sha256 "ffdd69ab88c55c835d55b30ccb0e3b24dff0fb66ab799efee7ebafb74719610d"
+      url "https://github.com/pg-tools/pgcompare/releases/download/v1.0.0/pgcompare_darwin_amd64.tar.gz"
+      sha256 "d7b800ce8764d731023e058c23e30512d0123bd3d411ad22c4a2436080476943"
 
       define_method(:install) do
         bin.install "pgcompare"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pg-tools/pgcompare/releases/download/v0.1.1/pgcompare_darwin_arm64.tar.gz"
-      sha256 "7b3345c2392909893dedd70d8ade26e473dba9ec8df1c11fe9e588ec77100932"
+      url "https://github.com/pg-tools/pgcompare/releases/download/v1.0.0/pgcompare_darwin_arm64.tar.gz"
+      sha256 "c7dfd8a39b5b3822b63aa7348c7eb58d79acbad800f31dbc3e3aeab84b6705be"
 
       define_method(:install) do
         bin.install "pgcompare"
@@ -29,15 +29,15 @@ class Pgcompare < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pg-tools/pgcompare/releases/download/v0.1.1/pgcompare_linux_amd64.tar.gz"
-      sha256 "5560378af36ecd8c8df79252a8007409573af9f4ab7f5e8e75a396c52a2933cb"
+      url "https://github.com/pg-tools/pgcompare/releases/download/v1.0.0/pgcompare_linux_amd64.tar.gz"
+      sha256 "9915dce34cab8352c48151c1977a9553dc58ac07f25113e1be2499abd7af8535"
       define_method(:install) do
         bin.install "pgcompare"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pg-tools/pgcompare/releases/download/v0.1.1/pgcompare_linux_arm64.tar.gz"
-      sha256 "e3ae4793176360acd160af3392e737adfc9a1efa8b20f0b90d68dff4f4ef74dc"
+      url "https://github.com/pg-tools/pgcompare/releases/download/v1.0.0/pgcompare_linux_arm64.tar.gz"
+      sha256 "f7439822bd13a99888fa6fbf23d64ddef99381af9ece25dda395c873ea58a603"
       define_method(:install) do
         bin.install "pgcompare"
       end
