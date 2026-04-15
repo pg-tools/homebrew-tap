@@ -11,7 +11,7 @@ class Pgcompare < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/pg-tools/pgcompare/releases/download/v1.1.0/pgcompare_darwin_amd64.tar.gz"
-      sha256 "90fa046f99279b73bf380edf0c1b91255cfe569b1dd3ba6762ab7ed3a7b437e6"
+      sha256 "b929f4b5d9da844965fbfda7f1b5c4deb38742929e666bc9b6c3ff99913e4c12"
 
       define_method(:install) do
         bin.install "pgcompare"
@@ -19,7 +19,7 @@ class Pgcompare < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/pg-tools/pgcompare/releases/download/v1.1.0/pgcompare_darwin_arm64.tar.gz"
-      sha256 "03c21129eaccda1cdc6c165f830e88156674d7817bfdb3f077166655933f640e"
+      sha256 "b13c98ae99bf551fc4e365cba3d659077208a115fa9ec3ddfdf9fb6bf6a35950"
 
       define_method(:install) do
         bin.install "pgcompare"
@@ -30,14 +30,14 @@ class Pgcompare < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/pg-tools/pgcompare/releases/download/v1.1.0/pgcompare_linux_amd64.tar.gz"
-      sha256 "5e7d60dda77d605b3ace979a25f90d8b192bd4480bbc30e8dfa0d6c5665987d1"
+      sha256 "77e3e4b15298ff1c88fa33918b70015231414f391a7bbf236be879433fd2585b"
       define_method(:install) do
         bin.install "pgcompare"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/pg-tools/pgcompare/releases/download/v1.1.0/pgcompare_linux_arm64.tar.gz"
-      sha256 "66b6ef68eb03021a260fd86d2940979cf55fb809e004d0d0114d46346f5846d1"
+      sha256 "fcce244db3bd2a196ad12b862d02ca6fc31b372290993682e77f5e2703bfc736"
       define_method(:install) do
         bin.install "pgcompare"
       end
